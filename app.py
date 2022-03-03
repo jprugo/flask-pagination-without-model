@@ -5,7 +5,6 @@ from handlers.routes import configure_routes
 from utils import get_connection_data
 
 app = Flask(__name__)
-
 conn_data = get_connection_data("secreto")
 
 # dialect+driver://username:password@host:port/database
@@ -16,5 +15,5 @@ db = SQLAlchemy(app)
 
 configure_routes(app, db)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
