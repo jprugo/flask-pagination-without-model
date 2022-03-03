@@ -1,0 +1,5 @@
+boto3
+moto
+flask_paginate
+flask_sqlalchemy
+psycopg2-binary
