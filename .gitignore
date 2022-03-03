@@ -50,3 +50,4 @@ node_modules/
 packages-lock.json
 
 .serverless
+.requirements.zip
