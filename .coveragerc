@@ -1,6 +1,0 @@
-# .coveragerc
-[report]
-show_missing = True
-omit =
-    test/*
-    app.py

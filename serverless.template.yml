@@ -1,4 +1,4 @@
-name: aws-python-flask-api
+name: aws-python-flask-api-2
 org: serverlessinc
 description: Deploys a Python Flask API service with traditional Serverless Framework
 keywords: aws, serverless, faas, lambda, python, flask

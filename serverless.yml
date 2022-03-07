@@ -1,25 +1,37 @@
-service: aws-python-flask-api
+service: aws-python-flask-api-2
 
-frameworkVersion: "3"
+frameworkVersion: "2.72.3"
 
 custom:
   wsgi:
     app: app.app 
   pythonRequirements:
+    layer: true
     zip: true
     dockerizePip: non-linux
     invalidateCaches: true
     pythonBin: python3
     useDownloadCache: false
     useStaticCache: false
+  myvariable: ${env:myVariable, 'pailas'}
 
 provider:
   name: aws
   runtime: python3.8
+  lambdaHashingVersion: '20201221'
+
+package:
+  patterns:
+    - './**'
+    - '!./test/**'
+    - '!./venv/**'
+    - '!./SaaS/**'
 
 functions:
   api:
     handler: wsgi_handler.handler
+    environment:
+      variable: hello world!
     events:
       - http:
           path: /
